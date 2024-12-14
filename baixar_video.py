@@ -15,10 +15,10 @@ def baixar_video():
         subprocess.run([
             "yt-dlp",
             "-f", f"{qualidade_video}+{qualidade_audio}",
-            "-o", f"{output_file}.mp4",
+            "-o", f"{output_file}",
             url
         ])
-        print("Download concluído e arquivo salvo como", output_file + ".mp4")
+        print("Download concluído e arquivo salvo como", output_file + "")
     except Exception as e:
         print(f"Erro ao processar o vídeo: {e}")
 
